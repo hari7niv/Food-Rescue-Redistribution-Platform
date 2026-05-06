@@ -1,6 +1,7 @@
 package com.example.demo.Controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +28,7 @@ public class VolunteersControllers {
         return service.volunteerLogin(login);
     }
 
-    @PostMapping("/Volunteers/accept-order")
+    @PutMapping("/Volunteers/accept-order")
     public String acceptOrder(@RequestBody VolunteerOrderDTO volunteerOrder){
         return service.acceptOrder(volunteerOrder.getVolunteerId(), volunteerOrder.getOrderId());
     }

@@ -1,5 +1,6 @@
 package com.example.demo.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -26,4 +27,9 @@ public class OrderService {
     public Optional<Order> findById(Long id) {
         return repo.findById(id);
     }
+
+    public List<Order> getOrder() {
+        return repo.findAll();
+    }
+
 }
